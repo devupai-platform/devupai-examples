@@ -18,7 +18,7 @@ import autogen
 DEVUPAI_CONFIG = {
     "config_list": [
         {
-            "model": "meta-llama/Llama-3.3-70B-Instruct",
+            "model": "meta-llama/Llama-3.3-70B-Instruct-Turbo",
             "api_key": os.environ.get("DEVUPAI_API_KEY"),
             "base_url": "https://api.devupai.com/v1",
         }
