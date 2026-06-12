@@ -23,7 +23,7 @@ client = OpenAI(
 
 def stream_chat(
     prompt: str,
-    model: str = "meta-llama/Llama-3.3-70B-Instruct",
+    model: str = "meta-llama/Llama-3.3-70B-Instruct-Turbo",
     system: str = "You are a helpful assistant.",
 ) -> str:
     """
