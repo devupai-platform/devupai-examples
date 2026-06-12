@@ -17,7 +17,7 @@ export const runtime = "edge";
 
 export async function POST(req: NextRequest) {
   try {
-    const { messages, model = "meta-llama/Llama-3.3-70B-Instruct" } =
+    const { messages, model = "meta-llama/Llama-3.3-70B-Instruct-Turbo" } =
       await req.json();
 
     // Validate input
