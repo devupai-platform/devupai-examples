@@ -21,7 +21,7 @@ client = OpenAI(
 )
 
 # ── Simple chat completion ────────────────────────────────────────────────────
-def chat(prompt: str, model: str = "meta-llama/Llama-3.3-70B-Instruct") -> str:
+def chat(prompt: str, model: str = "meta-llama/Llama-3.3-70B-Instruct-Turbo") -> str:
     """Send a single message and return the response text."""
     response = client.chat.completions.create(
         model=model,
@@ -42,7 +42,7 @@ def chat(prompt: str, model: str = "meta-llama/Llama-3.3-70B-Instruct") -> str:
 
 
 # ── Multi-turn conversation ───────────────────────────────────────────────────
-def multi_turn_chat(model: str = "meta-llama/Llama-3.3-70B-Instruct") -> None:
+def multi_turn_chat(model: str = "meta-llama/Llama-3.3-70B-Instruct-Turbo") -> None:
     """Interactive multi-turn conversation in the terminal."""
     print(f"\n🤖 DEVUP AI Chat — Model: {model}")
     print("Type 'exit' to quit, 'clear' to reset conversation.\n")
