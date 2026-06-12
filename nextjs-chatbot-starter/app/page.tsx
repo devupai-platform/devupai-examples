@@ -4,8 +4,8 @@ import { useChat } from "ai/react";
 import { useState } from "react";
 
 const MODELS = [
-  { id: "meta-llama/Llama-3.3-70B-Instruct", label: "Llama 3.3 70B" },
-  { id: "deepseek-ai/DeepSeek-V3-0324", label: "DeepSeek V3" },
+  { id: "meta-llama/Llama-3.3-70B-Instruct-Turbo", label: "Llama 3.3 70B" },
+  { id: "deepseek-ai/DeepSeek-V4-Pro", label: "DeepSeek V4" },
   { id: "Qwen/Qwen2.5-72B-Instruct", label: "Qwen 2.5 72B" },
   { id: "Qwen/Qwen2.5-Coder-32B-Instruct", label: "Qwen Coder 32B" },
 ];
