@@ -69,7 +69,7 @@ if __name__ == "__main__":
     print("=== Streaming Chat Example ===")
     stream_chat(
         prompt="Explain how neural networks learn in simple terms.",
-        model="meta-llama/Llama-3.3-70B-Instruct",
+        model="meta-llama/Llama-3.3-70B-Instruct-Turbo",
     )
 
     print("=== Streaming Code Generation ===")
