@@ -1,5 +1,5 @@
 <p align="center">
-<img src="https://raw.githubusercontent.com/devupai-platform/.github/main/profile/devu.webp" alt="DEVUP AI" width="120" />
+<img src="https://raw.githubusercontent.com/devupai-platform/.github/main/profile/devu.webp" alt="DEVUP AI — Algeria AI Inference Gateway logo" width="120" />
 </p>
 
 <h1 align="center">DEVUP AI — Examples & Starter Kits</h1>
