@@ -1,68 +1,232 @@
 <p align="center">
-<img src="https://raw.githubusercontent.com/devupai-platform/.github/main/profile/devu.webp" alt="DEVUP AI — Algeria AI Inference Gateway logo" width="120" />
+  <a href="https://devupai.com">
+    <img src="https://devupai.com/image/devu.png" alt="DEVUP AI" width="160" />
+  </a>
 </p>
 
-<h1 align="center">DEVUP AI — Examples & Starter Kits</h1>
+<h1 align="center">DEVUP AI — Official Examples</h1>
 
 <p align="center">
-  <strong>Production-ready examples for integrating with the DEVUP AI inference gateway.</strong>
+  <strong>Production-oriented starter kits and reference implementations for building with DEVUP AI.</strong>
 </p>
 
 <p align="center">
-  <a href="https://devupai.com">Website</a> •
-  <a href="https://devupai.com/docs">Docs</a> •
-  <a href="https://devupai.com/dashboard">Get API Key</a>
+  <a href="https://devupai.com">Platform</a> ·
+  <a href="https://docs.devupai.com">Documentation</a> ·
+  <a href="https://devupai.com/models">Models</a> ·
+  <a href="https://devupai.com/dashboard">Dashboard</a> ·
+  <a href="https://status.devupai.com">Status</a> ·
+  <a href="https://www.npmjs.com/package/devupai">npm</a>
+</p>
+
+<p align="center">
+  <a href="https://www.npmjs.com/package/devupai">
+    <img
+      src="https://img.shields.io/npm/v/devupai.svg?style=flat-square&label=DEVUP%20AI%20SDK"
+      alt="DEVUP AI SDK"
+    />
+  </a>
+  <a href="https://github.com/devupai-platform/devupai-examples/actions/workflows/ci.yml">
+    <img
+      src="https://github.com/devupai-platform/devupai-examples/actions/workflows/ci.yml/badge.svg?branch=main"
+      alt="GitHub Actions CI"
+    />
+  </a>
+  <img
+    src="https://img.shields.io/badge/Next.js-16.3.0-black?style=flat-square"
+    alt="Next.js 16.3.0"
+  />
+  <img
+    src="https://img.shields.io/badge/TypeScript-Strict-3178C6?style=flat-square"
+    alt="TypeScript Strict"
+  />
 </p>
 
 ---
 
-## 📁 Starter Kits
+## About the Repository
 
-| Starter Kit | Stack | Description |
-| :--- | :--- | :--- |
-| [`nextjs-chatbot-starter`](./nextjs-chatbot-starter/) | Next.js, Vercel AI SDK | Full-stack AI chatbot with streaming responses |
-| [`python-autogen-agent`](./python-autogen-agent/) | Python, AutoGen | Multi-agent AI workflow using Microsoft AutoGen |
+This repository contains official runnable examples and starter kits for the DEVUP AI platform.
 
----
-
-## 🔑 Prerequisites
-
-1. **Create a DEVUP AI account** at [devupai.com](https://devupai.com)
-2. **Generate an API key** from your [Dashboard → API Keys](https://devupai.com/dashboard/api-keys)
-3. **Top up your balance** in DZD via CCP, BaridiMob, or SlickPay
+These examples are designed to provide a production-grade foundation for developers to learn from and extend into their own applications.
 
 ---
 
-## ⚡ How It Works
+## Available Examples
 
-DEVUP AI is a **drop-in replacement for the OpenAI API**. Any project that uses the OpenAI SDK works instantly — just change the base URL:
+| Example | Stack | Status |
+|---------|-------|--------|
+| [Next.js AI Chatbot](./nextjs/ai-chatbot) | Next.js `16.3.0`, React `19.2.8`, `devupai@3.0.0`, AI SDK `6.0.242` | **Available** |
 
-```diff
-- base_url = "https://api.openai.com/v1"
-+ base_url = "https://api.devupai.com/v1"
+---
+
+## Featured Starter
+
+### Next.js AI Chatbot
+
+The Next.js AI Chatbot is our primary reference implementation for conversational AI applications.
+
+**Highlights:**
+
+- Official provider integration through `createDevupAI` from `devupai/ai`
+- Native AI SDK streaming through `streamText`
+- Real-time **streaming** responses
+- Strict **server-side API-key handling**
+- Configurable **model allowlist**
+- Server-side **validation** for payload and messages
+- Clean **Markdown rendering**
+- Comprehensive **Vitest tests**
+
+[Explore the Next.js AI Chatbot →](./nextjs/ai-chatbot)
+
+---
+
+## Requirements
+
+- Node.js 20.9.0 or newer
+- npm 10 or newer
+- A DEVUP AI API key
+
+---
+
+## Quick Start
+
+To run the Next.js AI Chatbot example locally:
+
+```bash
+git clone https://github.com/devupai-platform/devupai-examples.git
+cd devupai-examples
+npm ci
 ```
 
-That's it. Your models, your code, our infrastructure.
+Then navigate to the starter directory:
+
+```bash
+cd nextjs/ai-chatbot
+```
+
+Create your environment variables file:
+
+**Windows PowerShell:**
+```powershell
+Copy-Item .env.example .env.local
+```
+
+**macOS/Linux:**
+```bash
+cp .env.example .env.local
+```
+
+Open `.env.local` and add your API key:
+
+```env
+DEVUP_API_KEY=sk-devup-your-api-key
+```
+
+Run the development server:
+
+```bash
+npm run dev
+```
+
+Open your browser to:
+[http://localhost:3000](http://localhost:3000)
 
 ---
 
-## 🤝 Contributing
+## Repository Structure
 
-We welcome contributions! If you've built something cool with DEVUP AI:
-
-1. Fork this repo
-2. Add your example in a new directory
-3. Include a `README.md` with setup instructions
-4. Open a Pull Request
+```text
+devupai-examples/
+├── .github/
+│   └── workflows/
+│       └── ci.yml
+├── nextjs/
+│   └── ai-chatbot/
+├── CONTRIBUTING.md
+├── SECURITY.md
+├── package.json
+├── package-lock.json
+└── README.md
+```
 
 ---
 
-## 📜 License
+## Repository Principles
 
-MIT — See [LICENSE](./LICENSE) for details.
+All supported examples in this repository adhere to strict validation and security criteria:
+
+- **Runnable from a clean clone**
+- **Secure server-side secret handling**
+- **No live API calls during CI tests**
+- **Complete per-example documentation**
+- **Controlled dependency versions**
+- **Meaningful automated tests**
+
+Please report any security issues or vulnerabilities privately. [Review our Security Policy →](./SECURITY.md)
+
+---
+
+## Roadmap
+
+The following examples are planned and are not yet available.
+
+### API and SDK Examples
+- Node.js SDK quickstart
+- Node.js streaming
+- Embeddings and RAG
+- Image generation
+- Audio transcription
+- Video generation
+- Native inference
+
+### Python and Agent Examples
+- Python OpenAI-compatible quickstart
+- Python streaming
+- AutoGen multi-agent workflow
+- Agent tool calling
+
+### Compute Examples
+- GPU PyTorch training
+- GPU inference server
+- CPU FastAPI service
+- Persistent Network Volume workflow
+- JupyterLab GPU workflow
+
+---
+
+## Contributing
+
+We welcome contributions to the DEVUP AI examples repository.
+
+[Read the Contributing Guidelines →](./CONTRIBUTING.md)
+
+---
+
+## Resources
+
+| Resource | Link |
+|----------|------|
+| Platform | [https://devupai.com](https://devupai.com) |
+| Documentation | [https://docs.devupai.com](https://docs.devupai.com) |
+| Model Catalog | [https://devupai.com/models](https://devupai.com/models) |
+| Dashboard | [https://devupai.com/dashboard](https://devupai.com/dashboard) |
+| API Keys | [https://devupai.com/dashboard/api-keys](https://devupai.com/dashboard/api-keys) |
+| Node.js SDK | [https://www.npmjs.com/package/devupai](https://www.npmjs.com/package/devupai) |
+| GitHub Organization | [https://github.com/devupai-platform](https://github.com/devupai-platform) |
+| Status | [https://status.devupai.com](https://status.devupai.com) |
+| Support | [support@devupai.com](mailto:support@devupai.com) |
 
 ---
 
 <p align="center">
-  <sub>Built with 🇩🇿 by <a href="https://devupai.com">DEVUP AI</a> — Algeria's AI Infrastructure</sub>
+  Built in Algeria. Connected to the global AI ecosystem.
+</p>
+
+<p align="center">
+  <a href="https://devupai.com">Platform</a> ·
+  <a href="https://docs.devupai.com">Documentation</a> ·
+  <a href="https://devupai.com/models">Models</a> ·
+  <a href="https://devupai.com/dashboard">Dashboard</a> ·
+  <a href="https://status.devupai.com">Status</a>
 </p>
